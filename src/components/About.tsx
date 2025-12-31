@@ -74,7 +74,7 @@ export default function About() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/public/repair.png"
+                src="/repair.png"
                 alt="AC Repair Service"
                 className="w-full h-auto object-cover"
               />
