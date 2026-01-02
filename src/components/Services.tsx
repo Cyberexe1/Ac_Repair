@@ -1,5 +1,6 @@
 import { Wrench, Wind, Settings, Filter, Droplets, Package, Zap, Shield } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
+import PageTitle from './PageTitle';
 
 export default function Services() {
   const [isVisible, setIsVisible] = useState(false);
@@ -86,7 +87,13 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" ref={sectionRef} className="py-20 bg-white">
+    <>
+      <PageTitle 
+        title="Services"
+        description="Professional AC repair, installation, maintenance, and cleaning services in Mumbai. Comprehensive AC solutions for all your cooling needs."
+        path="/services"
+      />
+      <section id="services" ref={sectionRef} className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`text-center mb-8 sm:mb-12 md:mb-16 transform transition-all duration-1000 ${
@@ -113,8 +120,9 @@ export default function Services() {
               <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
                 <img
                   src={service.image}
-                  alt={service.title}
+                  alt={`Professional ${service.title.toLowerCase()} service in Mumbai - ${service.description}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 bg-blue-600 text-white p-3 rounded-full">
@@ -137,5 +145,6 @@ export default function Services() {
         </div>
       </div>
     </section>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Instagram, Youtube } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
+import PageTitle from './PageTitle';
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,7 +49,13 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" ref={sectionRef} className="py-20 bg-white">
+    <>
+      <PageTitle 
+        title="Contact"
+        description="Contact Modern Mechanical A.C. Repair for professional AC services in Mumbai. Call us at +91 9004365819 or visit our location in Kandivali, Mumbai."
+        path="/contact"
+      />
+      <section id="contact" ref={sectionRef} className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`text-center mb-8 sm:mb-12 md:mb-16 transform transition-all duration-1000 ${
@@ -135,5 +142,6 @@ export default function Contact() {
         </div>
       </div>
     </section>
+    </>
   );
 }

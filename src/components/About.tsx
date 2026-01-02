@@ -1,5 +1,6 @@
 import { CheckCircle } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
+import PageTitle from './PageTitle';
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +35,13 @@ export default function About() {
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-16 sm:py-20 bg-gray-50">
+    <>
+      <PageTitle 
+        title="About"
+        description="Learn about Modern Mechanical A.C. Repair, your trusted provider of professional air conditioning services in Mumbai with years of experience and certified technicians."
+        path="/about"
+      />
+      <section id="about" ref={sectionRef} className="py-16 sm:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile layout: image on top, text below */}
         <div className="lg:hidden">
@@ -65,8 +72,9 @@ export default function About() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="/repair.png"
-                  alt="AC Repair Service"
+                  alt="Professional AC repair service technician working on air conditioning unit in Mumbai"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-600/50 to-transparent"></div>
               </div>
@@ -163,5 +171,6 @@ export default function About() {
         </div>
       </div>
     </section>
+    </>
   );
 }

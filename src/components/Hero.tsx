@@ -1,5 +1,6 @@
 import { Snowflake, Award, Clock } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import PageTitle from './PageTitle';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,19 +17,25 @@ export default function Hero() {
   };
 
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600 overflow-hidden"
-    >
+    <>
+      <PageTitle 
+        title="Home"
+        description="Professional AC repair, installation & maintenance services in Mumbai. Expert technicians, competitive pricing, 24/7 emergency service available."
+        path="/"
+      />
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600 overflow-hidden"
+      >
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 animate-float">
-          <Snowflake size={80} className="text-white" />
+          <Snowflake size={80} className="text-white" aria-hidden="true" />
         </div>
         <div className="absolute bottom-20 right-20 animate-float-delayed">
-          <Snowflake size={100} className="text-white" />
+          <Snowflake size={100} className="text-white" aria-hidden="true" />
         </div>
         <div className="absolute top-1/2 right-10 animate-float">
-          <Snowflake size={60} className="text-white" />
+          <Snowflake size={60} className="text-white" aria-hidden="true" />
         </div>
       </div>
 
@@ -92,5 +99,6 @@ export default function Hero() {
         </svg>
       </div>
     </section>
+    </>
   );
 }
