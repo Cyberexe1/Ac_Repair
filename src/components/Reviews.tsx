@@ -70,19 +70,19 @@ export default function Reviews() {
     <section id="reviews" ref={sectionRef} className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`text-center mb-16 transform transition-all duration-1000 ${
+          className={`text-center mb-8 sm:mb-12 md:mb-16 transform transition-all duration-1000 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
             Customer <span className="text-blue-600">Reviews</span>
           </h2>
-          <p className="text-xl text-gray-600">What our clients say about us</p>
+          <p className="text-base sm:text-lg text-gray-600">What our clients say about us</p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-12 overflow-hidden">
-            <div className="relative min-h-64">
+        <div className="relative max-w-full sm:max-w-4xl mx-auto px-4">
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden">
+            <div className="relative min-h-56 sm:min-h-64">
               {reviews.map((review, index) => (
                 <div
                   key={index}
@@ -101,25 +101,25 @@ export default function Reviews() {
                       ))}
                     </div>
 
-                    <p className="text-xl text-gray-700 mb-8 leading-relaxed italic">
+                    <p className="text-lg sm:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed italic">
                       "{review.text}"
                     </p>
 
                     <div className="w-16 h-1 bg-blue-600 rounded-full mb-6"></div>
 
-                    <p className="text-lg font-semibold text-gray-900">{review.name}</p>
+                    <p className="text-base sm:text-lg font-semibold text-gray-900">{review.name}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="flex items-center justify-center gap-8 mt-8">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 mt-6 sm:mt-8">
               <button
                 onClick={prevSlide}
-                className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors shadow-lg"
+                className="bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition-colors shadow-lg"
                 aria-label="Previous review"
               >
-                <ChevronLeft size={24} />
+                <ChevronLeft size={20} />
               </button>
 
               <div className="flex gap-2">
@@ -137,10 +137,10 @@ export default function Reviews() {
 
               <button
                 onClick={nextSlide}
-                className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors shadow-lg"
+                className="bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition-colors shadow-lg"
                 aria-label="Next review"
               >
-                <ChevronRight size={24} />
+                <ChevronRight size={20} />
               </button>
             </div>
           </div>

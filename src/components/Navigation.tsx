@@ -26,7 +26,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
             <h1
-              className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold transition-colors duration-300 ${
                 scrolled ? 'text-blue-600' : 'text-white'
               }`}
             >
@@ -34,14 +34,14 @@ export default function Navigation({ scrolled }: NavigationProps) {
             </h1>
           </div>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden lg:flex space-x-6 xl:space-x-8">
             {['home', 'about', 'services', 'reviews', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
                 className={`capitalize font-medium transition-colors duration-300 hover:text-blue-600 ${
                   scrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                } text-sm sm:text-base`}
               >
                 {item}
               </button>
@@ -62,13 +62,13 @@ export default function Navigation({ scrolled }: NavigationProps) {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="px-4 py-4 space-y-3">
+        <div className="md:hidden bg-white shadow-lg rounded-b-xl">
+          <div className="px-4 py-4 space-y-2 sm:space-y-3">
             {['home', 'about', 'services', 'reviews', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="block w-full text-left capitalize font-medium text-gray-700 hover:text-blue-600 transition-colors py-2"
+                className="block w-full text-left capitalize font-medium text-gray-700 hover:text-blue-600 transition-colors py-3 sm:py-4 border-b border-gray-100 last:border-b-0"
               >
                 {item}
               </button>

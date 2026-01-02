@@ -89,19 +89,19 @@ export default function Services() {
     <section id="services" ref={sectionRef} className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`text-center mb-16 transform transition-all duration-1000 ${
+          className={`text-center mb-8 sm:mb-12 md:mb-16 transform transition-all duration-1000 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
             Our <span className="text-blue-600">Services</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Comprehensive AC solutions for all your cooling needs
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -110,7 +110,7 @@ export default function Services() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -122,12 +122,12 @@ export default function Services() {
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-gray-600 mb-4 min-h-12">{service.description}</p>
+              <div className="p-4 sm:p-5 md:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 min-h-12">{service.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors">
+                  <span className="text-xl sm:text-2xl font-bold text-blue-600">{service.price}</span>
+                  <button className="bg-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold hover:bg-blue-700 transition-colors">
                     Book Now
                   </button>
                 </div>

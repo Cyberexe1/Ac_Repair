@@ -38,31 +38,31 @@ export default function Hero() {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Cool Comfort,
             <br />
             <span className="text-cyan-300">Hot Service</span>
           </h1>
-          <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-6 sm:mb-8 max-w-3xl mx-auto">
             Professional AC Repair, Installation & Maintenance Services in Mumbai
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 sm:mb-12 md:mb-16 max-w-md mx-auto">
             <button
               onClick={scrollToContact}
-              className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-xl"
+              className="bg-white text-blue-600 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-xl w-full sm:w-auto"
             >
               Book Service Now
             </button>
             <a
               href="tel:919004365819"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105"
+              className="bg-transparent border-2 border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               Call +91 9004365819
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
             {[
               { icon: Award, title: 'Certified Experts', text: 'Years of Experience' },
               { icon: Clock, title: '24/7 Available', text: 'Emergency Service' },
@@ -74,9 +74,9 @@ export default function Hero() {
                   (index + 1) * 200
                 } ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
               >
-                <item.icon className="mx-auto mb-4 text-cyan-300" size={48} />
-                <h3 className="text-white font-semibold text-lg mb-2">{item.title}</h3>
-                <p className="text-blue-200">{item.text}</p>
+                <item.icon className="mx-auto mb-3 sm:mb-4 text-cyan-300" size={36} />
+                <h3 className="text-white font-semibold text-base sm:text-lg mb-1 sm:mb-2">{item.title}</h3>
+                <p className="text-blue-200 text-sm sm:text-base">{item.text}</p>
               </div>
             ))}
           </div>

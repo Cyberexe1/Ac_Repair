@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Navigation scrolled={scrolled} />
       <FloatingButtons />
       <Hero />
