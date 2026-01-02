@@ -1,4 +1,4 @@
-import { Phone, MessageCircle } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 export default function FloatingButtons() {
   return (
